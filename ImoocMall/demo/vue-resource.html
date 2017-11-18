@@ -39,7 +39,7 @@
     },
     http:{
 //      全局路径的配置
-      root:"http://localhost:63342/vue_node_shopdemo/ImoocMall/"
+      root:"http://localhost:63342/code_demo/vue_node_shopdemo/ImoocMall/"
     },
     methods:{
       get:function () {
@@ -71,6 +71,7 @@
         this.$http.jsonp("https://api.github.com?callback=JSON_CALLBACK").then(function (data) {
           this.msg = data;
 //          alert(data)
+          console.log(data)
         });
       },
       http: function () {
