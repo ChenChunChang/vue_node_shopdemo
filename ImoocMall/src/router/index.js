@@ -12,16 +12,21 @@ export default new Router({
   mode:'history',//去除#
   // mode:'hash',//需要#
   routes: [
-    {
+    /*{
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
-    },
+    },*/
     {
-      path: '/goods/:goodsId/user/:name',
+      path: '/',
       name: 'GoodsList',
-      component: GoodsList,
-      children:[
+      // component:GoodsList,
+      components: {
+        default:GoodsList,
+        title:Title,
+        img:Image
+      }
+      /*children:[
         {
           path: 'title',
           name: 'title',
@@ -32,10 +37,10 @@ export default new Router({
           name: 'image',
           component: Image
         }
-      ]
+      ]*/
     },
     {
-      path: '/cart',
+      path: '/cart/:cartId',
       name: 'cart',
       component: Cart
     }

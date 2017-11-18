@@ -8,8 +8,9 @@
     <div class="children_div">
       <router-view/>
     </div>
-    <router-link to="/cart">跳转到购物车页面</router-link>
-    <button @click="jump">跳转到购物车页面</button>
+    <!--<router-link to="/cart">跳转到购物车页面</router-link>-->
+    <router-link v-bind:to="{name:'cart',params:{cartId:123}}">跳转到购物车页面</router-link>
+    <!--<button @click="jump">跳转到购物车页面</button>-->
   </div>
 </template>
 
@@ -23,7 +24,9 @@ export default {
   },
   methods:{
     jump(){
-      this.$router.push({path: "/cart?goodsId=123"});
+//      this.$router.push({path: "/cart?goodsId=123"});
+      this.$router.go(-2);
+
     }
   }
 }
