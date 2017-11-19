@@ -8,17 +8,18 @@ import Cart from '@/views/Cart'
 
 Vue.use(Router)
 
-export default new Router({
+// export default new Router({
+export let router = new Router({
   mode:'history',//去除#
   // mode:'hash',//需要#
   routes: [
-    /*{
+    {
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
-    },*/
+    },
     {
-      path: '/',
+      path: '/goods',
       name: 'GoodsList',
       // component:GoodsList,
       components: {

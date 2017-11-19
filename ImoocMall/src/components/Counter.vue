@@ -18,6 +18,8 @@
     methods:{
       increase(){
         this.$emit("incre");
+
+        import('./../util');
       },
       decrease(){
         this.$emit("decre");
