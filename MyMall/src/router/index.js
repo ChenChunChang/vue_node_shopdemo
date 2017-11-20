@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import GoodsList from '@/views/GoodsList'
 
 Vue.use(Router)
 
@@ -8,9 +8,9 @@ export default new Router({
   mode:'history',//去除#
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path:'/',
+      name:'GoodsList',
+      component:GoodsList
     }
   ]
 })
